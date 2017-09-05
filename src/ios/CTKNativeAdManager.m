@@ -90,6 +90,7 @@ RCT_EXPORT_METHOD(disableAutoRefresh:(NSString*)placementId) {
   FBNAtiveAd *nativeAd = [_adsManagers[myPlacementId] nextNativeAd];
   FBAdChoicesView *adChoicesView = [[FBAdChoicesView alloc] initWithNativeAd:nativeAd expandable:true];
   [adView addSubView:adChoicesView];
+  [adView bringSubviewToFront:adsChoiceView];
   [adChoiceView updateFromFromSuperview:(UIRectCornerTopLeft)];
   return [CTKNativeAdView new];
 }
