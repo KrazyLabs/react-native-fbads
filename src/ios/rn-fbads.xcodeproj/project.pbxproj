@@ -28,6 +28,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		14A6F6BC1FEACE9100B92D3A /* Frameworks */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Frameworks; sourceTree = "<group>"; };
 		AD540C141E36734D00EB6B73 /* CTKBannerViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTKBannerViewManager.h; sourceTree = "<group>"; };
 		AD540C151E36734D00EB6B73 /* CTKBannerViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTKBannerViewManager.m; sourceTree = "<group>"; };
 		AD540C171E36739C00EB6B73 /* CTKBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTKBannerView.h; sourceTree = "<group>"; };
@@ -57,6 +58,7 @@
 		ADDCEC9A1D96B7DD00C511E0 = {
 			isa = PBXGroup;
 			children = (
+				14A6F6BC1FEACE9100B92D3A /* Frameworks */,
 				ADBC7F061D9D5CB900D1CC4D /* CTKInterstitialAdManager.h */,
 				ADBC7F071D9D5CB900D1CC4D /* CTKInterstitialAdManager.m */,
 				ADE502321D9C7A3400A44A63 /* CTKAdSettingsManager.h */,
@@ -234,8 +236,7 @@
 		ADDCECAD1D96B7DE00C511E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = ../../../../ios;
-				HEADER_SEARCH_PATHS = ../../../../ios/FBAudienceNetwork.framework/Headers;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -245,8 +246,7 @@
 		ADDCECAE1D96B7DE00C511E0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = ../../../../ios;
-				HEADER_SEARCH_PATHS = ../../../../ios/FBAudienceNetwork.framework/Headers;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
