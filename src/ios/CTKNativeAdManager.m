@@ -49,7 +49,7 @@ RCT_EXPORT_MODULE()
 RCT_EXPORT_METHOD(init:(NSString *)placementId withAdsToRequest:(NSInteger*)adsToRequest) {
   FBNativeAdsManager *adsManager = [[FBNativeAdsManager alloc] initWithPlacementID:placementId forNumAdsRequested:adsToRequest];
 
-  myPlacementId = placementId;
+  _myPlacementId = placementId;
 
   __weak typeof(self) weakSelf = self;
   [adsManager setDelegate:weakSelf];
@@ -87,11 +87,11 @@ RCT_EXPORT_METHOD(disableAutoRefresh:(NSString*)placementId) {
 
 - (UIView *)view {
   CTKNativeAdView *adView = [CTKNativeAdView new];
-  FBNAtiveAd *nativeAd = [_adsManagers[myPlacementId] nextNativeAd];
+  FBNativeAd *nativeAd = [_adsManagers[_myPlacementId] nextNativeAd];
   FBAdChoicesView *adChoicesView = [[FBAdChoicesView alloc] initWithNativeAd:nativeAd expandable:true];
-  [adView addSubView:adChoicesView];
-  [adView bringSubviewToFront:adsChoiceView];
-  [adChoiceView updateFromFromSuperview:(UIRectCornerTopLeft)];
+  [adView addSubview:adChoicesView];
+  [adView bringSubviewToFront:adChoicesView];
+  [adChoicesView updateFrameFromSuperview:(UIRectCornerTopRight)];
   return [CTKNativeAdView new];
 }
 
