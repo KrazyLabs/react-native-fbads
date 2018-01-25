@@ -92,7 +92,7 @@ RCT_EXPORT_METHOD(disableAutoRefresh:(NSString*)placementId) {
   [adView addSubview:adChoicesView];
   [adView bringSubviewToFront:adChoicesView];
   [adChoicesView updateFrameFromSuperview:(UIRectCornerTopRight)];
-  return [CTKNativeAdView new];
+  return adView;
 }
 
 RCT_EXPORT_VIEW_PROPERTY(onAdLoaded, RCTBubblingEventBlock)
